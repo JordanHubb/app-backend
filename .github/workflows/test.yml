@@ -4,7 +4,7 @@ on : [ push ]
 
 jobs:
   test:
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 16
@@ -13,4 +13,4 @@ jobs:
           distribution: "adopt"
           java-version: 16
       - name: clean build
-        runs: ./gradlew clean test --info --stacktrace
+        run: ./gradlew clean test --info --stacktrace
