@@ -12,5 +12,7 @@ jobs:
         with:
           distribution: "adopt"
           java-version: 19
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: clean test
-        run: ./gradlew.bat clean test --info --stacktrace
+        run: ./gradlew clean test --info --stacktrace
