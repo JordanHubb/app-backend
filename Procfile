@@ -1,0 +1,1 @@
+web java -Dserver.port=$Port $JAVA_OPTS -jar nuild/libs/webtech-0.0.1-SNAPSHOT.jar
