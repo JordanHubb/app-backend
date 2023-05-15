@@ -14,8 +14,8 @@ public class PersonRestController {
 
         public PersonRestController() {
             persons=new ArrayList<>();
-            persons.add(new Person(1,"Max","Mustermann",false ));
-            persons.add(new Person(1,"Maxi","Musterfrau",false ));
+            persons.add(new Person(1,"Max","Mustermann", "MaxiKing" ));
+            persons.add(new Person(2,"Maxi","Musterfrau","MaxiQueen" ));
     }
 
         @GetMapping(path="/api/v1/persons")
