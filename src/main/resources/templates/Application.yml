@@ -1,23 +1,26 @@
 spring:
   datasource:
-    username: rhfgngczpptley
-    password: 30f6fef0ee641aa654c4ee467969caceac1606436e3c24b3f714f527aa4bd11e
-    url: jdbc:postgresql://ec2-54-77-120-158.eu-west-1.compute.amazonaws.com:5432/d9t59og67apj27
-    driver-class-name: org.postgresql.Driver
-  hikari:
-    maximum-pool-size: 5
+    url:  ${DATASOURCE_URL}
+    username:  ${DATASOURCE_USERNAME}
+    password:  ${DATASOURCE_PASSWORD}
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+    # The SQL dialect makes Hibernate generate better SQL for the chosen database
+        dialect: org.hibernate.dialect.H2Dialect
         jdbc:
           time_zone: UTC
-    show-sql: false
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false # Set true for debugging
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: update # (create, create-drop, validate, update)
     open-in-view: false
   sql:
     init:
-      platform: postgres
+      platform: h2
       mode: always
