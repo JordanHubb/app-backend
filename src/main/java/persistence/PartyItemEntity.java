@@ -42,7 +42,7 @@ public class PartyItemEntity {
 
     protected PartyItemEntity() {}
 
-    public long getId() { return id; }
+    public static long getId() { return id; }
 
     public String getDrinks() { return drinks; }
     public void setDrinks(String article) { this.drinks = article; }
