@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DATASOURCE_URL}
-    username: ${DATASOURCE_USERNAME}
-    password:  ${DATASOURCE_PASSWORD}
+    url: jdbc:h2:file:/Users/User/Desktop/UNI/Webtech/app-backend/database
+    username: tomate
+    password: tomate
     driverClassName: org.h2.Driver
   h2:
     console:

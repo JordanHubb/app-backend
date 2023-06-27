@@ -63,7 +63,7 @@ public class PartyItemService {
 
     private PartyItem transformEntity(PartyItemEntity partyItemEntity) {
         return new PartyItem(
-                PartyItemEntity.getId(),
+                partyItemEntity.getId(),
                 partyItemEntity.getDrinks(),
                 partyItemEntity.getFood(),
                 partyItemEntity.getSupplies(),

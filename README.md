@@ -2,6 +2,10 @@
 
 # app-backend
 
-Wir werden eine Webseite erstellen, auf der man sich
-als User registrieren kann, um einen eigenen Blog erstellen zu können
-und oder den Blog anderer User kommentieren kann.
+Thema: Party - Planer
+
+Wir bauen eine Applikation mit der man angeben kann welche Dinge eine Person zu einer Party mitbringt damit dies gut organisiert werden kann.
+
+Dabei wird eine Liste erstellt, die mit Drinks, Essen, Musikwünsche, Partygegenständen wie Ballons, Hütte usw. gefüllt wird. 
+
+Diese Liste kann durch Korrekturen, Ergänzungen oder Kürzungen bearbeitet werden.

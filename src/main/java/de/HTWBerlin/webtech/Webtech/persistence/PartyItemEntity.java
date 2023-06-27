@@ -1,15 +1,16 @@
 package de.HTWBerlin.webtech.Webtech.persistence;
-import jakarta.persistence.*;
 
 
+import javax.persistence.*;
 
-@Entity(name = "Partylist")
+
+@Entity(name = "partylist")
 public class PartyItemEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private static long id;
+    private long id;
 
     @Column(name = "drinks", nullable = false)
     private String drinks;
@@ -39,9 +40,9 @@ public class PartyItemEntity {
         this.brought = brought;
     }
 
-    protected PartyItemEntity() {}
+    public PartyItemEntity() {}
 
-    public static long getId() { return id; }
+    public long getId() { return id; }
 
     public String getDrinks() { return drinks; }
     public void setDrinks(String article) { this.drinks = article; }
