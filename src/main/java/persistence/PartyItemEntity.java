@@ -10,7 +10,7 @@ public class PartyItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private long id;
+    private static long id;
 
     @Column(name = "drinks", nullable = false)
     private String drinks;
