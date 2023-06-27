@@ -4,7 +4,7 @@ import de.HTWBerlin.webtech.Webtech.api.PartyItem;
 import de.HTWBerlin.webtech.Webtech.api.PartyItemManipulationRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.PartyItemService;
+import de.HTWBerlin.webtech.Webtech.service.PartyItemService;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
