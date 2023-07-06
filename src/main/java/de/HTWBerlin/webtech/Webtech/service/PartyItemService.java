@@ -32,7 +32,7 @@ public class PartyItemService {
     }
 
     public PartyItem create(PartyItemManipulationRequest request) {
-        var partyItemEntity = new PartyItemEntity(request.getDrinks(), request.getFood(), request.getTrack(),request.getSupplies(),request.getPrice(),request.isBrought());
+        var partyItemEntity = new PartyItemEntity(request.getName(), request.getDrinks(), request.getFood(), request.getTrack(),request.getSupplies(),request.getPrice(),request.isBrought());
         partyItemEntity = partyItemRepository.save(partyItemEntity);
         return transformEntity(partyItemEntity);
     }
@@ -43,6 +43,7 @@ public class PartyItemService {
             return null;
         }
         var partyItemEntity = partyItemEntityOptional.get();
+        partyItemEntity.setName(request.getName());
         partyItemEntity.setDrinks(request.getDrinks());
         partyItemEntity.setFood(request.getFood());
         partyItemEntity.setTrack(request.getTrack());
@@ -64,6 +65,7 @@ public class PartyItemService {
     private PartyItem transformEntity(PartyItemEntity partyItemEntity) {
         return new PartyItem(
                 partyItemEntity.getId(),
+                partyItemEntity.getName(),
                 partyItemEntity.getDrinks(),
                 partyItemEntity.getFood(),
                 partyItemEntity.getSupplies(),

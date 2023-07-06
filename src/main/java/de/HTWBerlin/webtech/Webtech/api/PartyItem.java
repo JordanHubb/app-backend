@@ -3,6 +3,7 @@ package de.HTWBerlin.webtech.Webtech.api;
 public class PartyItem {
 
     private long id;
+    private String name;
     private String drinks;
     private String food;
     private String track;
@@ -11,8 +12,9 @@ public class PartyItem {
     private boolean brought;
 
 
-    public PartyItem(long id, String drinks, String food, String track, String supplies, int price, boolean brought) {
+    public PartyItem(long id,String name, String drinks, String food, String track, String supplies, int price, boolean brought) {
         this.id = id;
+        this.name = name;
         this.drinks = drinks;
         this.food = food;
         this.track = track;
@@ -24,6 +26,8 @@ public class PartyItem {
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
     public String getDrinks() { return drinks; }
     public void setDrinks(String drinks) { this.drinks = drinks; }
 

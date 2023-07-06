@@ -12,6 +12,8 @@ public class PartyItemEntity {
     @Column(name = "id", nullable = false)
     private long id;
 
+    @Column(name = "name", nullable = false)
+    private String name;
     @Column(name = "drinks", nullable = false)
     private String drinks;
 
@@ -31,7 +33,8 @@ public class PartyItemEntity {
     private boolean brought;
 
 
-    public PartyItemEntity(String drinks, String food, String track, String supplies, int price, boolean brought) {
+    public PartyItemEntity(String name, String drinks, String food, String track, String supplies, int price, boolean brought) {
+        this.name = name;
         this.drinks = drinks;
         this.food = food;
         this.track = track;
@@ -44,21 +47,24 @@ public class PartyItemEntity {
 
     public long getId() { return id; }
 
+    public String getName() { return name; }
+    public void setName(String name) { this.drinks = name; }
+
     public String getDrinks() { return drinks; }
-    public void setDrinks(String article) { this.drinks = article; }
+    public void setDrinks(String drinks) { this.drinks = drinks; }
 
     public String getFood() { return food; }
-    public void setFood(String brand) { this.food = brand; }
+    public void setFood(String food) { this.food = food; }
 
     public String getTrack() { return track; }
-    public void setTrack(String shop) { this.track = shop; }
+    public void setTrack(String track) { this.track = track; }
 
     public String getSupplies() { return supplies; }
-    public void setSupplies(String size) { this.supplies = size; }
+    public void setSupplies(String supplies) { this.supplies = supplies; }
 
     public int getPrice() { return price; }
-    public void setPrice(int amount) { this.price = amount; }
+    public void setPrice(int price) { this.price = price; }
 
     public boolean isBrought() { return brought; }
-    public void setBrought(boolean received) { this.brought = received; }
+    public void setBrought(boolean brought) { this.brought = brought; }
 }

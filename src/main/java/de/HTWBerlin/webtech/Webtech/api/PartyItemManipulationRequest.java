@@ -1,6 +1,7 @@
 package de.HTWBerlin.webtech.Webtech.api;
 
 public class PartyItemManipulationRequest {
+    private String name;
     private String drinks;
     private String food;
     private String track;
@@ -8,7 +9,8 @@ public class PartyItemManipulationRequest {
     private int price;
     private boolean brought;
 
-    public PartyItemManipulationRequest(String drinks, String food, String track, String supplies, int price, boolean brought) {
+    public PartyItemManipulationRequest(String name, String drinks, String food, String track, String supplies, int price, boolean brought) {
+        this.name = name;
         this.drinks = drinks;
         this.food = food;
         this.track = track;
@@ -17,13 +19,17 @@ public class PartyItemManipulationRequest {
         this.brought = brought;
     }
     public PartyItemManipulationRequest() {}
-    public String getDrinks() {
-        return drinks;
+
+    public String getName() {
+        return name;
     }
 
-    public void setDrinks(String drinks) {
-        this.drinks = drinks;
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String getDrinks(){return drinks;}
+    public void setDrinks(String drinks) {this.drinks = drinks;}
 
     public String getFood() {
         return food;
