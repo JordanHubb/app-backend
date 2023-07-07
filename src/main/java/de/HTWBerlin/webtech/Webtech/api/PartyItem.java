@@ -28,17 +28,18 @@ public class PartyItem {
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
+
     public String getDrinks() { return drinks; }
     public void setDrinks(String drinks) { this.drinks = drinks; }
 
     public String getFood() { return food; }
     public void setFood(String food) { this.food = food; }
 
-    public String getTrack() { return track; }
-    public void setTrack(String track) { this.track = track; }
-
     public String getSupplies() { return supplies; }
     public void setSupplies(String supplies) { this.supplies = supplies; }
+
+    public String getTrack() { return track; }
+    public void setTrack(String track) { this.track = track; }
 
     public int getPrice() { return price; }
     public void setPrice(int price) { this.price = price; }
