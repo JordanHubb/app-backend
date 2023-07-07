@@ -12,24 +12,24 @@ public class PartyItemEntity {
     @Column(name = "id", nullable = false)
     private long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String name;
-    @Column(name = "drinks", nullable = false)
+    @Column(name = "drinks")
     private String drinks;
 
-    @Column(name = "food", nullable = true)
+    @Column(name = "food")
     private String food;
 
-    @Column(name = "track", nullable = true)
+    @Column(name = "track")
     private String track;
 
-    @Column(name = "supplies", nullable = true)
+    @Column(name = "supplies")
     private String supplies;
 
-    @Column(name = "price", nullable = false)
+    @Column(name = "price")
     private int price;
 
-    @Column(name = "brought", nullable = true)
+    @Column(name = "brought")
     private boolean brought;
 
 

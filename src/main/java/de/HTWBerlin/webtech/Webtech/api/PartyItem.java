@@ -35,11 +35,11 @@ public class PartyItem {
     public String getFood() { return food; }
     public void setFood(String food) { this.food = food; }
 
-    public String getSupplies() { return supplies; }
-    public void setSupplies(String supplies) { this.supplies = supplies; }
-
     public String getTrack() { return track; }
     public void setTrack(String track) { this.track = track; }
+
+    public String getSupplies() { return supplies; }
+    public void setSupplies(String supplies) { this.supplies = supplies; }
 
     public int getPrice() { return price; }
     public void setPrice(int price) { this.price = price; }
